@@ -15,7 +15,7 @@
 		"watch": "concurrently --kill-others \"npm run watch-scripts\" \"npm run watch-styles\" \"npm run serve-php\""
 	},
 	"repository": "git@github.com:tplassman/front-end-starter-kit.git",
-	"author": "atrevbot",
+	"author": "tplassman",
 	"license": "ISC",
 	"devDependencies": {
 		"@babel/core": "^7.8.3",
