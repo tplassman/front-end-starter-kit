@@ -4,7 +4,7 @@
 	"description": "Front-end starter kit for web projects.",
 	"main": "index.js",
 	"scripts": {
-		"build-markup": "console.log('TODO: Ececute script to compile markup w/ optional data source')",
+		"build-markup": "console.log('TODO: Execute script to compile markup w/ optional data source')",
 		"build-scripts": "browserify src/scripts/index.js -t babelify -o public/scripts/index.js",
 		"build-styles": "node-sass --include-path scss src/styles/index.scss public/styles/index.css",
 		"build": "npm run build-scripts && npm run build-styles",
