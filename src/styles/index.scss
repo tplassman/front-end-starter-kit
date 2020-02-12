@@ -1,0 +1,21 @@
+/**
+ * styles/index.scss
+ * Entry point for included styles
+ */
+
+/**
+ * Order is important in the base imports
+ */
+
+@import "base/reset";
+@import "base/variables";
+@import "base/typography";
+@import "base/elements";
+
+/**
+ * Order alphabetically
+ */
+
+// Components
+@import "components/form";
+@import "components/main";

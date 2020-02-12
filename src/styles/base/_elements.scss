@@ -1,0 +1,78 @@
+html {
+	font-size: 62.5%; // Sets up the Base 10 stuff
+}
+
+body {
+	@include font("body-md");
+	position: relative;
+	margin: 0 auto;
+	background-color: $color-black;
+}
+
+a {
+	cursor: pointer;
+}
+
+sup {
+	vertical-align: super;
+	font-size: 0.5em;
+}
+
+hr {
+	width: 100%;
+	height: 1px;
+	margin: $spacing-sm 0;
+	padding: 0;
+	background-color: $color-br-gray-lt;
+}
+
+[type=text],
+[type=number],
+[type=search],
+[type=password],
+[type=email],
+[type=tel],
+[type=radio],
+[type=submit],
+[type=reset],
+select,
+textarea {
+	// appearance: none;
+	padding: 0;
+	background: none;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+
+	&:-ms-expand {
+		display: none;
+	}
+}
+
+[type=checkbox],
+[type=radio] {
+	&:checked {
+		&:after {
+			// Custom radio buttons
+		}
+	}
+}
+
+[type=radio] {
+	border-radius: 50%;
+}
+
+[type="submit"],
+button {
+	@include font("body-md");
+	padding: 0;
+	background: none;
+	border: 0;
+	border-radius: 0;
+	cursor: pointer;
+
+	&:disabled {
+		cursor: inherit;
+	}
+}
+

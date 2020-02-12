@@ -1,0 +1,84 @@
+/* Breakpoints */
+
+$screen-sm-min: 768px;
+$screen-xs-max: $screen-sm-min - 1;
+$screen-md-min: 1080px;
+$screen-sm-max: $screen-md-min - 1;
+$screen-lg-min: 1366px;
+$screen-md-max: $screen-lg-min - 1;
+$screen-xl-min: 1800px;
+$screen-lg-max: $screen-xl-min - 1;
+
+/* Spacing */
+
+$spacing-xs: 12px;
+$spacing-sm: 24px;
+$spacing-md: 48px;
+$spacing-lg: 96px;
+$spacing-xl: 128px;
+
+/* Layout */
+
+$min-page-width: 320px;
+$max-page-width: 1900px;
+$max-width-xs: 220px;
+$max-width-sm: 330px;
+$max-width-md: 550px;
+$max-width-lg: 770px;
+$gutter-xs: $spacing-xs * 1.5;
+$gutter-sm: $spacing-xs * 1.5;
+$gutter-md: $spacing-sm;
+$gutter-lg: $spacing-sm;
+$grid-xs: (
+	base: 4,
+	cont-spread: "wider",
+	gutter: $gutter-xs,
+);
+$grid-sm: (
+	base: 8,
+	cont-spread: "wider",
+	gutter: $gutter-sm,
+);
+$grid-md: (
+	base: 12,
+	cont-spread: "wider",
+	gutter: $gutter-md,
+);
+$grid-lg: (
+	base: 12,
+	cont-spread: "wider",
+	gutter: $gutter-lg,
+);
+
+/* Colors */
+
+$color-white: #FFF;
+$color-black: #444;
+$color-fg-gray-lt: #999;
+$color-fg-gray-md: #666;
+$color-fg-gray-dk: #333;
+$color-bg-gray-lt: #F4F5F7;
+$color-bg-gray-md: #999;
+$color-bg-gray-dk: #292F41;
+$color-br-gray-lt: #DEDEDE;
+$color-br-gray-dk: #111;
+
+/* Font */
+
+$font-family-sans: sans-serif;
+$font-family-serif: serif;
+$font-family-mono: monospace;
+
+/* Animations */
+
+$animate-profile: ease-out;
+$animate-speed-xs: 0.1s;
+$animate-speed-sm: 0.2s;
+$animate-speed-md: 0.3s;
+$animate-speed-lg: 0.5s;
+$animate-speed-xl: 0.8s;
+$animate-xs: $animate-speed-xs $animate-profile;
+$animate-sm: $animate-speed-sm $animate-profile;
+$animate-md: $animate-speed-md $animate-profile;
+$animate-lg: $animate-speed-lg $animate-profile;
+$animate-xl: $animate-speed-xl $animate-profile;

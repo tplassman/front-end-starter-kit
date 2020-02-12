@@ -1,0 +1,112 @@
+// https://css-tricks.com/snippets/css/less-mixin-for-rem-font-sizing/
+@mixin fontSizeRem($size-value: 1.6) {
+	font-size: ($size-value * 10) + px;
+	font-size: $size-value + rem;
+}
+
+@mixin lineHeightRem($size-value: 1.6) {
+	line-height: ($size-value * 10) + px;
+	line-height: $size-value + rem;
+}
+
+@mixin bold() {
+	// TODO: Add bold font-family if available
+	font-weight: 700;
+}
+
+@mixin italic() {
+	// TODO: Add italic font-family if available
+	font-style: italic;
+}
+
+@mixin font($size) {
+	// Heading
+	@if ($size == "heading-xl") {
+		@include bold;
+		@include fontSizeRem(3.6);
+		@include lineHeightRem(4.2);
+		font-family: $font-family-sans;
+	}
+	@if ($size == "heading-lg") {
+		@include bold;
+		@include fontSizeRem(3.6);
+		@include lineHeightRem(4.2);
+		font-family: $font-family-sans;
+	}
+	@if ($size == "heading-md") {
+		@include bold;
+		@include fontSizeRem(2.2);
+		@include lineHeightRem(2.8);
+		font-family: $font-family-sans;
+	}
+	@if ($size == "heading-sm") {
+		@include fontSizeRem(2.6);
+		@include lineHeightRem(3.6);
+		font-family: $font-family-serif;
+	}
+	@if ($size == "heading-xs") {
+		@include bold;
+		@include fontSizeRem(1.3);
+		@include lineHeightRem(2.0);
+		font-family: $font-family-mono;
+	}
+
+	// Body
+	@if ($size == "body-lg") {
+		@include fontSizeRem(1.8);
+		@include lineHeightRem(2.8);
+		font-family: $font-family-serif;
+	}
+	@if ($size == "body-md") {
+		@include fontSizeRem(1.6);
+		@include lineHeightRem(2.4);
+		font-family: $font-family-serif;
+	}
+	@if ($size == "body-sm") {
+		@include fontSizeRem(1.4);
+		@include lineHeightRem(1.8);
+		font-family: $font-family-sans;
+	}
+
+	// Link / Button
+	@if ($size == "link-md") {
+		@include bold;
+		@include fontSizeRem(1.4);
+		@include lineHeightRem(2.4);
+		font-family: $font-family-mono;
+	}
+}
+
+@mixin link($size: "md", $icon: false) {
+	@include font("link-md");
+	color: navy;
+	transition: color $animate-sm;
+
+	&:hover {
+		color: darken(orange, 5%);
+	}
+
+	@if ($icon) {
+		display: flex;
+		align-items: center;
+
+		> em {
+			font-size: $spacing-sm;
+		}
+	}
+}
+
+@mixin button() {
+	@include font("link-md");
+	display: inline-block;
+	line-height: 36px;
+	padding: 0 $spacing-sm;
+	background-color: orange;
+	color: navy;
+	border-radius: 3px;
+	transition: background-color $animate-sm;
+
+	&:hover {
+		background-color: darken(orange, 5%);
+	}
+}

@@ -1,0 +1,105 @@
+form[method="get"],
+form[method="post"] {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 555px;
+	margin: 0 auto;
+	padding: ($spacing-xs * 3) $spacing-sm $spacing-sm;
+	background-color: $color-bg-gray-lt;
+	border: 1px solid $color-br-gray-lt;
+	box-shadow: 2px 2px $spacing-xs 2px $color-br-gray-lt;
+
+	section > & {
+		margin: $spacing-md auto;
+	}
+
+	> *:first-child {
+		margin: 0;
+	}
+
+	> h3 {
+		@include font("heading-sm");
+	}
+
+	> label {
+		@include font("heading-xs");
+		display: block;
+		margin-top: $spacing-sm;
+		color: $color-black;
+	}
+
+	> fieldset {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		margin-top: $spacing-sm;
+	}
+
+	> label + fieldset {
+		justify-content: flex-start;
+		align-items: flex-end;
+		margin-top: $spacing-xs / 2;
+		padding-bottom: $spacing-xs / 2;
+		border-bottom: 1px solid $color-br-gray-lt;
+
+		label {
+			@include font("body-md");
+			margin-right: $spacing-xs / 2;
+			color: $color-fg-gray-md;
+
+			[type="checkbox"],
+			[type="radio"] {
+				margin-right: $spacing-xs / 4;
+			}
+		}
+	}
+
+	[type="text"],
+	[type="email"],
+	[type="number"],
+	[type="search"],
+	textarea {
+		@include font("body-md");
+		display: block;
+		width: 100%;
+		height: 36px;
+		line-height: 36px;
+		margin-top: $spacing-xs / 2;
+		padding: $spacing-xs;
+		background-color: $color-white;
+		border: 1px solid $color-br-gray-dk;
+
+		&:focus {
+			background-color: rgba(lightblue, 0.1);
+			border: 1px solid navy;
+		}
+	}
+
+	textarea {
+		@include font("body-md");
+		min-height: $spacing-xl;
+	}
+
+	[type="reset"] {
+		@include link;
+		min-width: $max-width-xs;
+		line-height: 36px;
+		line-height: 36px;
+		margin-right: $spacing-xs;
+		cursor: pointer;
+	}
+
+	[type="submit"] {
+		@include button;
+		appearance: none;
+		align-self: center;
+		min-width: $max-width-xs;
+		margin-top: $spacing-xs * 3;
+	}
+
+	fieldset > [type="submit"] {
+		margin: 0;
+	}
+}

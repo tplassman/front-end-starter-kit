@@ -1,0 +1,37 @@
+{
+	"name": "front-end-starter-kit",
+	"version": "0.0.1",
+	"description": "Front-end starter kit for web projects.",
+	"main": "index.js",
+	"scripts": {
+		"build-markup": "console.log('TODO: Ececute script to compile markup w/ optional data source')",
+		"build-scripts": "browserify src/scripts/index.js -t babelify -o public/scripts/index.js",
+		"build-styles": "node-sass --include-path scss src/styles/index.scss public/styles/index.css",
+		"build": "npm run build-scripts && npm run build-styles",
+		"serve-php": "php -S 127.0.0.1:8000",
+		"watch-markup": "nodemon --watch src -e twig -x \"npm run build-markup\"",
+		"watch-scripts": "nodemon --watch src -x \"npm run build-scripts\"",
+		"watch-styles": "nodemon --watch src -e scss -x \"npm run build-styles\"",
+		"watch": "concurrently --kill-others \"npm run watch-scripts\" \"npm run watch-styles\" \"npm run serve-php\""
+	},
+	"repository": "git@github.com:atrevbot/the-store.git",
+	"author": "atrevbot",
+	"license": "ISC",
+	"devDependencies": {
+		"@babel/core": "^7.8.3",
+		"@babel/preset-env": "^7.8.3",
+		"babelify": "^10.0.0",
+		"browserify": "^16.5.0",
+		"concurrently": "^5.0.2",
+		"node-sass": "^4.13.1",
+		"nodemon": "^2.0.2"
+	},
+	"dependencies": {
+		"compop": "0.0.2"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	}
+}
