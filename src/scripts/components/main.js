@@ -4,6 +4,6 @@ export default class {
 	}) {
 		const el = document.getElementById(id);
 
-        console.log(`Welcome to the ${el} event!`);
+		console.log(`Welcome to the ${el} event!`);
 	}
 }
