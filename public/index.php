@@ -23,7 +23,7 @@ $bodies = ['Large', 'Medium', 'Small'];
 
 	<body>
 		<script>
-			window["the-store"] = { components: [], state: {} };
+			window["my-site"] = { components: [], state: {} };
 		</script>
 
 		<main id="main" class="main">

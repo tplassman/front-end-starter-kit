@@ -11,7 +11,7 @@ const actions = {
 
 // Construct components on DOM content loaded
 function handleDOMConentLoaded() {
-	const scaffold = window["the-store"];
+	const scaffold = window["my-site"];
 
 	function cb() {
 		// Do something after components initialize

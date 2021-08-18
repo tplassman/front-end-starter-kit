@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"build-markup": "console.log('TODO: Execute script to compile markup w/ optional data source')",
-		"build-scripts": "browserify src/scripts/index.js -t babelify -o public/scripts/index.js",
+		"build-scripts": "esbuild src/scripts/index.js --bundle --minify --sourcemap --outfile=public/scripts/index.js",
 		"build-styles": "node-sass --include-path scss src/styles/index.scss public/styles/index.css",
 		"build": "npm run build-scripts && npm run build-styles",
 		"serve-php": "php -S 127.0.0.1:8000",
@@ -18,20 +18,12 @@
 	"author": "tplassman",
 	"license": "ISC",
 	"devDependencies": {
-		"@babel/core": "^7.8.3",
-		"@babel/preset-env": "^7.8.3",
-		"babelify": "^10.0.0",
-		"browserify": "^16.5.0",
 		"concurrently": "^5.0.2",
+		"esbuild": "^0.12.20",
 		"node-sass": "^4.13.1",
 		"nodemon": "^2.0.2"
 	},
 	"dependencies": {
 		"compop": "0.0.2"
-	},
-	"babel": {
-		"presets": [
-			"@babel/preset-env"
-		]
 	}
 }
